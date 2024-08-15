@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PostService {
+  getPostById(arg0: number) {
+    throw new Error('Method not implemented.');
+  }
   private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
 
   constructor(private http: HttpClient) {}

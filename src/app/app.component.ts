@@ -9,4 +9,6 @@ import { NavigationComponent } from "./components/navigation/navigation.componen
   styleUrls: ['./app.component.css'],
   imports: [RouterOutlet, NavigationComponent] // Adicione RouterOutlet aqui
 })
-export class AppComponent { }
+export class AppComponent { 
+  title = 'angular-test';
+}
