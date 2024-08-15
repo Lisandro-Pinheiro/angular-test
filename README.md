@@ -118,5 +118,5 @@ Testes Unitários
 Os testes unitários são escritos utilizando o Karma e Jasmine. Eles testam se os componentes e serviços funcionam conforme o esperado.
 
 OBSERVAÇÕES:
-API Endpoint: O serviço PostService está configurado para se comunicar com a API JSONPlaceholder. Certifique-se de que a URL está correta.
+API Endpoint: O serviço PostService está configurado para se comunicar com a API JSONPlaceholder. Certifique-se de que a URL está correta  ( https://jsonplaceholder.typicode.com/posts ).
 Bootstrap: A aplicação pode ser estilizada utilizando o Bootstrap para facilitar a criação de um layout responsivo.
