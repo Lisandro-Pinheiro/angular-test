@@ -1,20 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { PostService } from '../../services/post.service';
-import { Post } from '../../models/post.model';
 
 @Component({
   selector: 'app-post-list',
+  standalone: true,
   templateUrl: './post-list.component.html',
-  styleUrls: ['./post-list.component.css']
+  styleUrls: ['./post-list.component.css'],
+  imports: [CommonModule, RouterLink]
 })
-export class PostListComponent implements OnInit {
-  posts: Post[] = [];
+export class PostListComponent {
+  posts: any[] = [];
 
   constructor(private postService: PostService) {}
 
   ngOnInit(): void {
-    this.postService.getPosts().subscribe(posts => {
-      this.posts = posts;
+    this.postService.getPosts().subscribe(data => {
+      this.posts = data;
     });
   }
 }

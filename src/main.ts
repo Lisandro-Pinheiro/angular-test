@@ -1,15 +1,13 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { AppComponent } from './app/app.component';
 import { provideRouter } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
-import { AppRoutingModule } from './app/app-routing.module';
+import { provideHttpClient } from '@angular/common/http';
+import { AppComponent } from '../src/app/app.component';  // Import your standalone component
+import { routes } from '../src/app/app.routes'; // Import your routes if you have them
 
 bootstrapApplication(AppComponent, {
   providers: [
-    // Importando o módulo HttpClient
-    HttpClientModule,
-    // Configurando o roteamento usando as rotas exportadas de AppRoutingModule
-    provideRouter(AppRoutingModule.routes),
-  ],
-}).catch(err => console.error(err));
+    provideRouter(routes),  // Provide the router configuration if you have routes
+    provideHttpClient()     // Provide HttpClient configuration
+  ]
+})
+.catch(err => console.error(err));

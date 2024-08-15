@@ -1,5 +1,22 @@
-<div *ngFor="let post of posts">
-  <h2>{{ post.title }}</h2>
-  <p>{{ post.body | slice: 0: 100 }}...</p>
-  <a [routerLink]="['/post', post.id]">Leia mais</a>
+<div class="container content">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10">
+      <table class="table table-responsive post-list">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Resumo</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let post of posts">
+            <td>{{ post.title }}</td>
+            <td>{{ post.body | slice: 0: 100 }}...</td>
+            <td><a class="btn back-button" [routerLink]="['/post', post.id]">Leia mais</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

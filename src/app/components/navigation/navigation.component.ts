@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-navigation',
   standalone: true,
+  selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css'],
-  imports: [CommonModule, RouterModule] // Adicione os módulos necessários
+  imports: [RouterLink]
 })
 export class NavigationComponent {}
