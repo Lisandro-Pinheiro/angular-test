@@ -1,25 +1,21 @@
-
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Post } from '../models/post.model'; // Ajuste o caminho conforme necessário
+import { Post } from '../models/post.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-
-  private apiUrl = 'URL_DA_SUA_API'; // Substitua pela URL da sua API
+  private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
 
   constructor(private http: HttpClient) {}
 
-  // Função para obter todos os posts
   getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(`${this.apiUrl}/posts`);
+    return this.http.get<Post[]>(this.apiUrl);
   }
 
-  // Função para obter um post específico por ID
   getPost(id: number): Observable<Post> {
-    return this.http.get<Post>(`${this.apiUrl}/posts/${id}`);
+    return this.http.get<Post>(`${this.apiUrl}/${id}`);
   }
 }

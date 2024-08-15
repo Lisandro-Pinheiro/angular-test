@@ -1,17 +1,15 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideRouter, RouterModule, Routes } from '@angular/router';
-import { AppComponent } from '../src/app/app.component';
-import { PostListComponent } from '../src/app/components/post-list/post-list.component';
-import { PostDetailComponent } from '../src/app/components/post-detail/post-detail.component';
-import { NavigationComponent } from '../src/app/components/navigation/navigation.component';
-
-const routes: Routes = [
-  { path: '', component: PostListComponent },
-  { path: 'post/:id', component: PostDetailComponent },
-];
+import { AppComponent } from './app/app.component';
+import { provideRouter } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app/app-routing.module';
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(routes),
+    // Importando o módulo HttpClient
+    HttpClientModule,
+    // Configurando o roteamento usando as rotas exportadas de AppRoutingModule
+    provideRouter(AppRoutingModule.routes),
   ],
 }).catch(err => console.error(err));
