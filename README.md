@@ -1,27 +1,122 @@
-# AngularTest
+Angular Test Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
+Este projeto é uma aplicação Angular de exemplo que demonstra a criação de uma aplicação web simples que consome uma API para listar e exibir detalhes de posts. O projeto inclui configuração básica, serviços, componentes e testes unitários.
 
-## Development server
+Estrutura do Projeto
+A estrutura do projeto é organizada da seguinte forma:
+src/
+app/
+components/
+post-list.component.ts: Componente para listar todos os posts.
+post-detail.component.ts: Componente para exibir detalhes de um post.
+navigation.component.ts: Componente para navegação entre páginas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+services/
+post.service.ts: Serviço que consome a API de posts.
 
-## Code scaffolding
+models/
+post.model.ts: Modelo de dados para posts.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+app.module.ts: Módulo principal da aplicação.
+app-routing.module.ts: Configuração de rotas da aplicação.
+app.component.ts: Componente raiz da aplicação.
+app.component.html: Template HTML do componente raiz.
+app.component.css: Estilos CSS do componente raiz.
+environments/: Configurações específicas para diferentes ambientes (desenvolvimento, produção).
 
-## Build
+Instalação e Configuração
+Requisitos
+Certifique-se de ter as seguintes ferramentas instaladas:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Node.js (versão 14 ou superior)
+Angular CLI (instalado globalmente)
 
-## Running unit tests
+Passos para Instalação
+Clone o Repositório
+git clone <https://github.com/Lisandro-Pinheiro/angular-test.git>
+cd <angular-test>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Instale as Dependências
 
-## Running end-to-end tests
+No diretório raiz do projeto, execute:
+npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+Entendido! Vou criar um arquivo README.md completo que descreve a estrutura da aplicação, como executá-la, e fornece uma explicação detalhada de cada parte do código. Este README inclui todas as informações necessárias para entender a aplicação como um todo.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Angular Test Application
+Este projeto é uma aplicação Angular de exemplo que demonstra a criação de uma aplicação web simples que consome uma API para listar e exibir detalhes de posts. O projeto inclui configuração básica, serviços, componentes e testes unitários.
+
+Estrutura do Projeto
+A estrutura do projeto é organizada da seguinte forma:
+
+src/
+app/
+components/
+post-list.component.ts: Componente para listar todos os posts.
+post-detail.component.ts: Componente para exibir detalhes de um post.
+navigation.component.ts: Componente para navegação entre páginas.
+services/
+post.service.ts: Serviço que consome a API de posts.
+models/
+post.model.ts: Modelo de dados para posts.
+app.module.ts: Módulo principal da aplicação.
+app-routing.module.ts: Configuração de rotas da aplicação.
+app.component.ts: Componente raiz da aplicação.
+app.component.html: Template HTML do componente raiz.
+app.component.css: Estilos CSS do componente raiz.
+assets/: Diretório para arquivos estáticos como imagens.
+environments/: Configurações específicas para diferentes ambientes (desenvolvimento, produção).
+Instalação e Configuração
+Requisitos
+Certifique-se de ter as seguintes ferramentas instaladas:
+
+Node.js (versão 14 ou superior)
+Angular CLI (instalado globalmente)
+Passos para Instalação
+Clone o Repositório
+
+bash
+Copiar código
+git clone <URL_DO_SEU_REPOSITORIO>
+cd <NOME_DO_REPOSITORIO>
+
+Instale as Dependências
+
+No diretório raiz do projeto, execute:
+npm install
+
+Execução da Aplicação
+Para iniciar a aplicação em modo de desenvolvimento, execute:
+ng serve 
+
+Testes Unitários
+Para executar os testes unitários, utilize o comando:
+
+ng test
+
+Estrutura e Funcionalidade do Código
+post.service.ts
+PostService: Serviço responsável por interagir com a API para obter posts. Inclui métodos getPosts e getPostById. 
+
+post-list.component.ts
+PostListComponent: Componente que exibe uma lista de posts. Utiliza o PostService para buscar posts e exibe cada post.
+
+post-detail.component.ts
+PostDetailComponent: Componente que exibe detalhes de um post específico. Utiliza o PostService para buscar os detalhes de um post com base no ID passado pela rota. 
+
+navigation.component.ts
+NavigationComponent: Componente que fornece uma barra de navegação para acessar diferentes seções da aplicação, como a lista de posts e detalhes dos posts.
+
+app.module.ts
+AppModule: Módulo principal da aplicação. Declara todos os componentes e serviços necessários para a aplicação Angular.
+
+post.model.ts
+Post Model: Define a estrutura de dados para um post.
+
+Testes Unitários
+Os testes unitários são escritos utilizando o Karma e Jasmine. Eles testam se os componentes e serviços funcionam conforme o esperado.
+
+OBSERVAÇÕES:
+API Endpoint: O serviço PostService está configurado para se comunicar com a API JSONPlaceholder. Certifique-se de que a URL está correta.
+Bootstrap: A aplicação pode ser estilizada utilizando o Bootstrap para facilitar a criação de um layout responsivo.
